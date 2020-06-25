@@ -50,5 +50,11 @@ public class Controlador {
     }
 
 
+    @GetMapping("/news")
+    public String news (){
+        return "news";
+    }
+
+
 
 }
