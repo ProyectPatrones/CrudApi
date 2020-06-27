@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container mt-4">
-    <a th:href="@{/new}" class="btn btn-primary">Nuevo</a>
+    <a th:href="@{/person/new}" class="btn btn-primary">Nuevo</a>
     <table class="table">
         <thead>
         <tr>
@@ -16,16 +16,24 @@
             <th>NOMBRES</th>
             <th>APELLIDO</th>
             <th>ACCIONES</th>
+            <th>CORREO</th>
+            <th>SEXO</th>
+            <th>EDAD</th>
+            <th>NICEL DE SEDENTARISMO</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="persona:${personas}">
-            <td th:text="${persona.id}"></td>
-            <td th:text="${persona.name}"></td>
-            <td th:text="${persona.telefono}"></td>
+        <tr th:each="person:${people}">
+            <td th:text="${person.id}"></td>
+            <td th:text="${person.name}"></td>
+            <td th:text="${person.telefono}"></td>
+            <td th:text="${person.correo}"></td>
+            <td th:text="${person.sexo}"></td>
+            <td th:text="${person.edad}"></td>
+            <td th:text="${person.nactividad}"></td>
             <td>
-                <a th:href="@{/editar/}+${persona.id}" class="btn btn-info">Editar</a>
-                <a th:onclick="eliminar([[${persona.id}]])" class="btn btn-danger">Eliminar</a>
+                <a th:href="@{/person/editar/}+${person.id}" class="btn btn-info">Editar</a>
+                <a th:onclick="eliminar([[${person.id}]])" class="btn btn-danger">Eliminar</a>
 
 
             </td>

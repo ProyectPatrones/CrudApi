@@ -9,7 +9,7 @@ function eliminar(id){
         .then((OK) => {
             if (OK) {
                 $.ajax({
-                    url:"/eliminar/"+id,
+                    url:"/person/eliminar/"+id,
                     success: function (res) {
                         console.log(res);
                     }
@@ -18,7 +18,7 @@ function eliminar(id){
                     icon: "success",
                 }).then((ok)=>{
                     if(ok){
-                        location.href="/listar";
+                        location.href="/person/listar";
 
                     }
                     }
