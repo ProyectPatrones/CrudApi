@@ -14,12 +14,14 @@
         <tr>
             <th>ID</th>
             <th>NOMBRES</th>
-            <th>APELLIDO</th>
-            <th>ACCIONES</th>
+            <th>TELEFONO</th>
             <th>CORREO</th>
             <th>SEXO</th>
             <th>EDAD</th>
-            <th>NICEL DE SEDENTARISMO</th>
+            <th>TAMAÑO</th>
+            <th>PESO</th>
+            <th>NIVEL DE ACTIVIDAD</th>
+            <th>ACCIONES</th>
         </tr>
         </thead>
         <tbody>
@@ -30,10 +32,12 @@
             <td th:text="${person.correo}"></td>
             <td th:text="${person.sexo}"></td>
             <td th:text="${person.edad}"></td>
+            <td th:text="${person.altura}"></td>
+            <td th:text="${person.peso}"></td>
             <td th:text="${person.nactividad}"></td>
             <td>
                 <a th:href="@{/person/editar/}+${person.id}" class="btn btn-info">Editar</a>
-                <a th:onclick="eliminar([[${person.id}]])" class="btn btn-danger">Eliminar</a>
+                <a th:onclick="person eliminar([[${person.id}]])" class="btn btn-danger">Eliminar</a>
 
 
             </td>

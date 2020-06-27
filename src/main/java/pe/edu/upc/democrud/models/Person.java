@@ -21,6 +21,9 @@ public class Person implements Serializable {
     private String correo;
     private String sexo;
     private int edad;
+    private int altura;
+    private int peso;
+
 
     @Getter(AccessLevel.PRIVATE)
     @Setter(AccessLevel.PRIVATE)
