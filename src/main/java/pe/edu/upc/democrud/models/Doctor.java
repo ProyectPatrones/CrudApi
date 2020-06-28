@@ -1,28 +1,23 @@
 package pe.edu.upc.democrud.models;
 
-
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name="persona")
-public class Person implements Serializable {
+@Table (name = "doctor")
+public class Doctor implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idnews;
+    private int iddoctor;
     private String name;
-    private String telefono;
-    private int nactividad;
-    private String correo;
-    private String sexo;
-    private int edad;
-    private int altura;
-    private int peso;
+    private String username;
+    private  String email;
 
 
     @Getter(AccessLevel.PRIVATE)

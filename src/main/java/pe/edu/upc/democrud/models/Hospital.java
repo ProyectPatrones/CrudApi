@@ -7,23 +7,17 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name="persona")
-public class Person implements Serializable {
+@Table(name ="hospital")
+public class Hospital implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idnews;
+    private int idhospital;
     private String name;
-    private String telefono;
-    private int nactividad;
-    private String correo;
-    private String sexo;
-    private int edad;
-    private int altura;
-    private int peso;
-
+    private String location;
 
     @Getter(AccessLevel.PRIVATE)
     @Setter(AccessLevel.PRIVATE)

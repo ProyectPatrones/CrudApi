@@ -37,7 +37,7 @@
             <td th:text="${person.nactividad}"></td>
             <td>
                 <a th:href="@{/person/editar/}+${person.id}" class="btn btn-info">Editar</a>
-                <a th:onclick="person eliminar([[${person.id}]])" class="btn btn-danger">Eliminar</a>
+                <a th:onclick="deletePerson([[${person.id}]])" class="btn btn-danger">Eliminar</a>
 
 
             </td>

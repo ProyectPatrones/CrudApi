@@ -1,4 +1,4 @@
-function eliminar(id){
+function deletePerson(id){
     swal({
         title: "Seguro que quieres eliminar este usuario?",
         text: "Una vez eliminado no se podrá restaurar",
